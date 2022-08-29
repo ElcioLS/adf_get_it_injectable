@@ -1,0 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:math';
+
+import 'package:injectable/injectable.dart';
+
+@injectable
+class RandomFactoryModel {
+  int id;
+  String name;
+
+  RandomFactoryModel()
+      : id = Random().nextInt(1000),
+        name = 'RandomFactoryModel' {
+    print('$name: id: $id');
+  }
+}
